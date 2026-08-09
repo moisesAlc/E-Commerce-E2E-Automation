@@ -2,7 +2,11 @@
 
 ## Visão geral
 
-Este projeto é uma suíte de testes automatizados para um site de e-commerce usando Cypress. A suíte aponta para o demo público Magento Luma em [magento2-demo.magebit.com](https://magento2-demo.magebit.com/) (substituto do `magento.softwaretestingboard.com`, que foi descontinuado). Os scripts cobrem fluxos como navegação de produtos, adição ao carrinho, compra e ações relacionadas à conta.
+Este projeto é uma suíte de testes automatizados para um site de e-commerce usando Cypress. A suíte aponta para o demo público ScandiPWA em [luma-demo.scandipwa.com](https://luma-demo.scandipwa.com/) (frontend PWA sobre dados Magento Luma).
+
+Os scripts cobrem cadastro de conta e um fluxo de compra (coleções → produto → carrinho → checkout).
+
+> **Nota:** o demo público pode responder com Cloudflare **502** ou ficar lento no GraphQL. A suíte usa retries e timeouts altos por causa disso.
 
 ## Instalação
 
@@ -24,22 +28,13 @@ Instale as dependências:
   npm install
 ```
 
-Instale o Cypress (se ainda não estiver nas dependências):
-
-```bash
-  npm install cypress --save-dev
-```
-
 ## Cenários de teste
 
-- Navegação de produtos: busca e filtros.
-- Carrinho: adicionar/remover itens e atualizar quantidades.
-- Checkout: validação do fluxo de compra e integração de pagamento.
-- Conta do usuário: cadastro, login e gerenciamento de perfil.
+- Conta do usuário: cadastro via `/customer/account/create`.
+- Navegação: Collections (equivalente prático ao antigo What’s New).
+- Carrinho e checkout: produto configurável (Radiant Tee), opções, quantidade e compra como guest.
 
 ## Executando os testes
-
-Para rodar os testes Cypress, use os comandos abaixo.
 
 Abrir o Cypress Test Runner:
 
@@ -47,15 +42,11 @@ Abrir o Cypress Test Runner:
   npx cypress open
 ```
 
-Isso abre o painel do Cypress, onde você pode executar testes individuais ou a suíte completa.
-
 Rodar os testes em modo headless:
 
 ```bash
   npx cypress run
 ```
-
-Isso executa todos os testes sem a interface do navegador.
 
 Scripts npm disponíveis:
 
@@ -67,17 +58,13 @@ Scripts npm disponíveis:
 
 ## Cobertura de testes
 
-Os testes cobrem as seguintes áreas:
-
-- Páginas de produto: listagem e detalhes, incluindo filtros, busca e paginação.
-- Gestão do carrinho: adicionar produtos, atualizar quantidades e remover itens.
-- Autenticação: cadastro, login, logout e atualizações de perfil.
-- Fluxo de checkout: endereço, opções de envio, pagamento e conclusão do pedido.
-- Histórico de pedidos: validação do pedido após a compra.
+- Cadastro de cliente (mutation GraphQL `createCustomer`).
+- Página de coleções e PDP do Radiant Tee.
+- Seleção de cor/tamanho, adição ao carrinho e checkout guest.
 
 ## Relatórios
 
-Após a execução, artefatos do Cypress (quando gerados) ficam em diretórios como `cypress/screenshots` e `cypress/videos`.
+Após a execução, artefatos do Cypress (quando gerados) ficam em `cypress/screenshots` e `cypress/videos`.
 
 ## Contribuindo
 

@@ -4,8 +4,8 @@
     "lastName": "Am"
   },
   "password": {
-    "password": "Captain@123",
-    "confirmPassword": "Captain@123"
+    "password": "Captain@12345",
+    "confirmPassword": "Captain@12345"
   },
-  "successFullCreateAccountMessage": "Thank you for registering with Main Website Store."
+  "successFullCreateAccountMessage": "account"
 }

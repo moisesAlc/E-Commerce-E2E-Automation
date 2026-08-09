@@ -1,12 +1,17 @@
 {
   "product": {
-    "name": "Echo Fit Compression Short",
-    "path": "/echo-fit-compression-short.html"
+    "name": "Radiant Tee",
+    "path": "/radiant-tee.html",
+    "color": "Blue",
+    "size": "M",
+    "sku": "WS12-M-Blue",
+    "parentSku": "WS12",
+    "qty": 2
   },
   "message": {
-    "titleMessage": "New Luma Yoga Collection",
-    "addToCartMessage": "You added Echo Fit Compression Short to your ",
-    "purchaseMessage": "Thank you for your purchase!"
+    "titleMessage": "Collections",
+    "addToCartMessage": "Radiant Tee",
+    "purchaseMessage": "Thank you"
   },
   "shippingInfo": {
     "name": {
@@ -19,6 +24,8 @@
     "postalCode": "90001",
     "telephone": "3105551234",
     "country": "United States",
-    "region": "California"
+    "region": "California",
+    "countryCode": "US",
+    "regionCode": "CA"
   }
 }
