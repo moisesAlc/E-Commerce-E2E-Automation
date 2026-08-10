@@ -1,0 +1,11 @@
+URL: https://luma-demo.scandipwa.com/checkout
+HTTP: 200
+Title: Checkout
+TS: 2026-08-09T16:59:09.203Z
+Attempt: 1
+
+BODY:
+Demo store is hosted on readymage.com. Check new arrivals here! USD EUR About About Us Additional Info Privacy Policy Terms of use Use of Cookies Popular Categories Gear Women Men Follow Newsletter SUBSCRIBE Copyright © 2013-present Magento, Inc. All rights reserved. Powered by ScandiPWA We use cookies in order to give you the best possible experience on our website. View cookie policy GOT IT
+
+CONSOLE(sample):
+[error] Failed to load resource: the server responded with a status of 502 ()

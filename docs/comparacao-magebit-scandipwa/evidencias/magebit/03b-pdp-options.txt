@@ -1,0 +1,17 @@
+URL: https://magento2-demo.magebit.com/echo-fit-compression-short.html
+HTTP: 200
+Title: Echo Fit Compression Short
+TS: 2026-08-09T16:59:17.696Z
+Attempt: 1
+
+BODY:
+Skip to Content Default welcome msg! Sign In Create an Account My Cart Search Search Home Echo Fit Compression Short Echo Fit Compression Short Rating: 67 % of 100 3 Reviews Add Your Review As low as $24.00 IN STOCK SKU WSH07 Size 28 29 Color Qty Add to Cart ADD TO WISH LIST ADD TO COMPARE Skip to the end of the images gallery Skip to the beginning of the images gallery Details Your muscles know it's go time the second you pull on the Echo Fit Compression Short. A balance of firm, stimulating squeeze with breathability, it offers the support and comfort you need to give it your all. • Black compression shorts. • High-waisted cut. • Compression fit. • Inseam: 1.0". • Machine wash/dry. More Information Reviews 3 Related Products Check items to add to the cart or select all Tiffany Fit
+
+CONSOLE(sample):
+[error] The Content-Security-Policy directive 'frame-ancestors' does not support the source expression ''unsafe-inline''
+[info] Connecting to 'https://track.hubspot.com/__ptq.gif?k=1&v=1.1&a=1740226&pu=https%3A%2F%2Fmagento2-demo.magebit.com%2Fecho-fit-compression-short.html&t=Echo+Fit+Compression+Short&cts=1786294759958&sd=12
+[info] Connecting to 'https://track.hubspot.com/__ptq.gif?k=1&v=1.1&a=1740226&pu=https%3A%2F%2Fmagento2-demo.magebit.com%2Fecho-fit-compression-short.html&t=Echo+Fit+Compression+Short&cts=1786294759958&sd=12
+[log] JQMIGRATE: Migrate is installed with logging active, version 1.4.1
+[info] Connecting to 'https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1321231882&t=pageview&_s=1&dl=https%3A%2F%2Fmagento2-demo.magebit.com%2Fecho-fit-compression-short.html&ul=pt-br&dt=Echo%20Fit%2
+[info] Connecting to 'https://www.google-analytics.com/g/collect?v=2&tid=G-4VKS1TYG0D&gtm=45je6852v9126348102za20g&_p=1786294760973&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=EBAI&are=1&cid=2066720342.1786294761&frm=0
+[info] Connecting to 'https://www.google-analytics.com/g/collect?v=2&tid=G-4VKS1TYG0D&gtm=45je6852v9126348102za20g&_p=1786294760973&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=EBAI&are=1&cid=2066720342.1786294761&frm=0

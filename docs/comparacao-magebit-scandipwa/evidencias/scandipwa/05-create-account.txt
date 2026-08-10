@@ -1,0 +1,11 @@
+URL: https://luma-demo.scandipwa.com/customer/account/create
+HTTP: 200
+Title: 
+TS: 2026-08-09T16:58:56.877Z
+Attempt: 1
+
+BODY:
+Demo store is hosted on readymage.com. Check new arrivals here! USD EUR MEN WOMEN COLLECTIONS GEAR New Customers Creating an account has many benefits: check out faster, keep more than one address, track orders and more. Personal Information First Name * Last Name * Subscribe to newsletter Sign-Up Information Email * Password * Confirm password * SIGN UP Registered Customers If you have an account, sign in with your email address. SIGN IN About About Us Additional Info Privacy Policy Terms of use Use of Cookies Popular Categories Gear Women Men Follow Newsletter SUBSCRIBE Copyright © 2013-present Magento, Inc. All rights reserved. Powered by ScandiPWA
+
+CONSOLE(sample):
+

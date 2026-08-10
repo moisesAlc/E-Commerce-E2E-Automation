@@ -4,9 +4,9 @@
 
 Este projeto é uma suíte de testes automatizados para um site de e-commerce usando Cypress. A suíte aponta para o demo público ScandiPWA em [luma-demo.scandipwa.com](https://luma-demo.scandipwa.com/) (frontend PWA sobre dados Magento Luma).
 
-Os scripts cobrem cadastro de conta e um fluxo de compra (coleções → produto → carrinho → checkout).
+Os scripts cobrem cadastro de conta (UI) e compra guest **GraphQL-first** (smoke da home + carrinho/pedido via Magento GraphQL).
 
-> **Nota:** o demo público pode responder com Cloudflare **502** ou ficar lento no GraphQL. A suíte usa retries e timeouts altos por causa disso.
+> **Nota:** o demo público pode responder com Cloudflare **502** ou ficar lento no GraphQL. A suíte usa `cy.healthcheck` (fail-fast), retries e timeouts altos por causa disso. O caminho crítico do shop não depende de PDP/cart/checkout UI (instáveis neste demo).
 
 ## Instalação
 
@@ -31,8 +31,7 @@ Instale as dependências:
 ## Cenários de teste
 
 - Conta do usuário: cadastro via `/customer/account/create`.
-- Navegação: Collections (equivalente prático ao antigo What’s New).
-- Carrinho e checkout: produto configurável (Radiant Tee), opções, quantidade e compra como guest.
+- Shop guest: smoke da home + Radiant Tee (`WS12-M-Blue`) via GraphQL até `order_number`.
 
 ## Executando os testes
 
@@ -59,8 +58,8 @@ Scripts npm disponíveis:
 ## Cobertura de testes
 
 - Cadastro de cliente (mutation GraphQL `createCustomer`).
-- Página de coleções e PDP do Radiant Tee.
-- Seleção de cor/tamanho, adição ao carrinho e checkout guest.
+- Compra guest: `addConfigurableProductsToCart` + checkout GraphQL (`placeOrder`).
+- Helpers UI ScandiPWA mantidos no page object para debug (não são o path feliz do shop).
 
 ## Relatórios
 

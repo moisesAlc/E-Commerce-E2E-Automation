@@ -1,0 +1,190 @@
+{
+  "collectionsMenu": [
+    {
+      "i": 1,
+      "ts": "2026-08-09T17:06:05.499Z",
+      "error": "locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('nav a, header a, a').filter({ hasText: /^COLLECTIONS$/i }).first()\n"
+    },
+    {
+      "i": 2,
+      "ts": "2026-08-09T17:06:40.171Z",
+      "error": "locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('nav a, header a, a').filter({ hasText: /^COLLECTIONS$/i }).first()\n"
+    },
+    {
+      "i": 3,
+      "ts": "2026-08-09T17:07:14.857Z",
+      "error": "locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('nav a, header a, a').filter({ hasText: /^COLLECTIONS$/i }).first()\n"
+    }
+  ],
+  "notes": [],
+  "mageForm": {
+    "url": "https://magento2-demo.magebit.com/customer/account/create/",
+    "inputs": [
+      {
+        "name": "q",
+        "type": "text",
+        "id": "search"
+      },
+      {
+        "name": "form_key",
+        "type": "hidden",
+        "id": ""
+      },
+      {
+        "name": "form_key",
+        "type": "hidden",
+        "id": ""
+      },
+      {
+        "name": "success_url",
+        "type": "hidden",
+        "id": ""
+      },
+      {
+        "name": "error_url",
+        "type": "hidden",
+        "id": ""
+      },
+      {
+        "name": "firstname",
+        "type": "text",
+        "id": "firstname"
+      },
+      {
+        "name": "lastname",
+        "type": "text",
+        "id": "lastname"
+      },
+      {
+        "name": "is_subscribed",
+        "type": "checkbox",
+        "id": "is_subscribed"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "id": "email_address"
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "id": "password"
+      },
+      {
+        "name": "password_confirmation",
+        "type": "password",
+        "id": "password-confirmation"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "id": "newsletter"
+      },
+      {
+        "name": "username",
+        "type": "email",
+        "id": "customer-email"
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "id": "pass"
+      },
+      {
+        "name": "captcha_form_id",
+        "type": "hidden",
+        "id": ""
+      },
+      {
+        "name": "context",
+        "type": "hidden",
+        "id": ""
+      }
+    ],
+    "buttons": [
+      "Close",
+      "Search",
+      "Create an Account",
+      "Subscribe"
+    ],
+    "headings": [
+      "My Cart",
+      "You have no items in your shopping cart.",
+      "Search",
+      "Create New Customer Account",
+      "Personal Information",
+      "Sign-in Information",
+      "Newsletter"
+    ],
+    "body": "Skip to Content Default welcome msg! Sign In Create an Account My Cart Search Search What's New Women Men Gear TrainingSaleGift CardsTest Category Create New Customer Account Personal Information First Name Last Name Sign Up for Newsletter Sign-in Information Email Password Password Strength: No Password Confirm Password Create an Account Sign Up for Our Newsletter: Subscribe About us Customer Service Privacy and Cookie Policy Search Terms Orders and Returns Advanced Search Contact Us Copyright © 2013-present Magento, Inc. All rights reserved."
+  },
+  "scanForm": {
+    "url": "https://luma-demo.scandipwa.com/customer/account/create",
+    "inputs": [
+      {
+        "name": "",
+        "type": "text",
+        "id": "search-field"
+      },
+      {
+        "name": "firstname",
+        "type": "text",
+        "id": "firstname"
+      },
+      {
+        "name": "lastname",
+        "type": "text",
+        "id": "lastname"
+      },
+      {
+        "name": "is_subscribed",
+        "type": "checkbox",
+        "id": "is_subscribed"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "id": "email"
+      },
+      {
+        "name": "password",
+        "type": "password",
+        "id": "password"
+      },
+      {
+        "name": "confirm_password",
+        "type": "password",
+        "id": "confirm_password"
+      },
+      {
+        "name": "newsletterEmail",
+        "type": "email",
+        "id": ""
+      }
+    ],
+    "buttons": [
+      "Cancel",
+      "OK",
+      "SIGN UP",
+      "Sign in",
+      "SIGN IN",
+      "SUBSCRIBE"
+    ],
+    "headings": [
+      "Personal Information",
+      "Sign-Up Information"
+    ],
+    "body": "Demo store is hosted on readymage.com. Check new arrivals here! USD EUR MEN WOMEN COLLECTIONS GEAR New Customers Creating an account has many benefits: check out faster, keep more than one address, track orders and more. Personal Information First Name * Last Name * Subscribe to newsletter Sign-Up Information Email * Password * Confirm password * SIGN UP Registered Customers If you have an account, sign in with your email address. SIGN IN About About Us Additional Info Privacy Policy Terms of use Use of Cookies Popular Categories Gear Women Men Follow Newsletter SUBSCRIBE Copyright © 2013-present Magento, Inc. All rights reserved. Powered by ScandiPWA"
+  },
+  "magebitWhatsNewLinks": [],
+  "magebitWhatsNewPage": {
+    "url": "https://magento2-demo.magebit.com/what-is-new.html",
+    "title": "What's New",
+    "text": "Skip to Content Default welcome msg! Sign In Create an Account My Cart Search Search Home What's New What's New New Luma Yoga Collection The very latest yoga styles plus twists on timeless classics Shop New Yoga Whatever day brings Luma Cocona™ for b"
+  },
+  "cartIdle": {
+    "text": "Demo store is hosted on readymage.com. Check new arrivals here! USD EUR 0 items MEN WOMEN COLLECTIONS GEAR HomeShopping cart Cart Free shipping on any order with code SCANDIPWA Summary Subtotal US$ 0,00 About About Us Additional Info Privacy Policy Terms of use Use of Cookies Popular Categories Gear Women Men Follow Newsletter SUBSCRIBE Copyright © 2013-present Magento, Inc. All rights reserved. P",
+    "hasNoProducts": false,
+    "zeroItems": true
+  }
+}

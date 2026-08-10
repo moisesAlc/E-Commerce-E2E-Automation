@@ -1,0 +1,11 @@
+URL: https://luma-demo.scandipwa.com/radiant-tee.html
+HTTP: 200
+Title: Radiant Tee
+TS: 2026-08-09T16:58:48.214Z
+Attempt: 1
+
+BODY:
+Demo store is hosted on readymage.com. Check new arrivals here! USD EUR MEN WOMEN COLLECTIONS GEAR HomeWomenTopsTeesRadiant Tee Image not found Radiant Tee Write a review SKU: WS12 In stock Color Choose color... Blue Orange Purple Size Choose size... XS S M L XL US$ 22,00 ADD TO CART So light and comfy, you'll love the Radiant Tee's organic fabric, feel, performance and style. You may never want to stop moving in this shirt. • Salmon soft scoop neck tee. • Athletic, semi-form fit. • Flat seams prevent chafing. • 67% Organic Cotton / 28% Hemp / 5% Spandex. Product Details Style Tee Material Hemp, Organic Cotton, Spandex Pattern Solid Climate Indoor, Warm There are no reviews yet! Click button on the right to submit one! WRITE A REVIEW You Might Also Like (6) Gabrielle Micro Sleeve
+
+CONSOLE(sample):
+

@@ -165,6 +165,14 @@ export class whatsNewPage {
     cy.contains("h1", /cart/i, { timeout: 30000 }).should("be.visible");
   }
 
+  /**
+   * Hard assert via Magento GraphQL (path feliz do shop guest no demo ScandiPWA).
+   */
+  assertCartGraphql(productName) {
+    cy.assertCartGraphql(productName);
+  }
+
+  /** UI /cart first; GraphQL if storefront cart is empty (debug / legacy). */
   assertCartHasProduct(productName) {
     cy.visitWithRetry("/cart");
     cy.wait(4000);
@@ -183,35 +191,7 @@ export class whatsNewPage {
       cy.log(
         "UI /cart sem o produto; validando carrinho via GraphQL (fallback)."
       );
-      cy.window().then((win) => {
-        const cartId =
-          win.localStorage.getItem("guest_quote_id") ||
-          win.localStorage.getItem("cart_id") ||
-          win.localStorage.getItem("cartId") ||
-          win.localStorage.getItem("guest_cart_id");
-        expect(cartId, "cart id for GraphQL verify").to.be.a("string");
-
-        cy.gql(
-          `query ($id: String!) {
-            cart(cart_id: $id) {
-              total_quantity
-              items { id quantity }
-            }
-          }`,
-          { id: cartId },
-          { retries: 2 }
-        ).then((res) => {
-          expect(res.status).to.eq(200);
-          // Avoid selecting product { name } — demo often returns graphql-no-such-entity there.
-          expect(
-            res.body?.data?.cart?.total_quantity,
-            "GraphQL cart total_quantity"
-          ).to.be.greaterThan(0);
-          cy.log(
-            `GraphQL cart OK (qty=${res.body?.data?.cart?.total_quantity}) for expected product "${productName}"`
-          );
-        });
-      });
+      this.assertCartGraphql(productName);
     });
   }
 

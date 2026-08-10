@@ -86,7 +86,44 @@ Cypress.Commands.add("selectScandiOption", (selectId, optionLabel) => {
 });
 
 /**
- * Guest add configurable product via Magento GraphQL (fallback when UI ATC is flaky).
+ * Assert guest cart has items via GraphQL (no /cart UI).
+ */
+Cypress.Commands.add("assertCartGraphql", (productName = "") => {
+  cy.window().then((win) => {
+    const cartId =
+      win.localStorage.getItem("guest_quote_id") ||
+      win.localStorage.getItem("cart_id") ||
+      win.localStorage.getItem("cartId") ||
+      win.localStorage.getItem("guest_cart_id");
+    expect(cartId, "cart id for GraphQL verify").to.be.a("string");
+
+    cy.gql(
+      `query ($id: String!) {
+        cart(cart_id: $id) {
+          total_quantity
+          items { id quantity }
+        }
+      }`,
+      { id: cartId },
+      { retries: 2 }
+    ).then((res) => {
+      expect(res.status).to.eq(200);
+      // Avoid selecting product { name } — demo often returns graphql-no-such-entity there.
+      expect(
+        res.body?.data?.cart?.total_quantity,
+        "GraphQL cart total_quantity"
+      ).to.be.greaterThan(0);
+      if (productName) {
+        cy.log(
+          `GraphQL cart OK (qty=${res.body?.data?.cart?.total_quantity}) for expected product "${productName}"`
+        );
+      }
+    });
+  });
+});
+
+/**
+ * Guest add configurable product via Magento GraphQL (primary path on ScandiPWA demo).
  */
 Cypress.Commands.add(
   "addConfigurableToCartGraphql",

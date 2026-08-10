@@ -9,18 +9,15 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 ### Alterado
 - Migrou a `baseUrl` de `magento2-demo.magebit.com` para [luma-demo.scandipwa.com](https://luma-demo.scandipwa.com/).
 - Reescreveu page objects/commands para o frontend ScandiPWA (campos `name`, selects `#color`/`#size`, botões `Add to cart` / `Sign up`).
-- Substituiu o fluxo “What’s New” (inexistente no ScandiPWA) por Collections + produto Radiant Tee.
-- Passou o fluxo de compra para guest checkout, evitando dependência do cadastro sob 502 intermitente.
+- Shop guest passou a ser **GraphQL-first** (carrinho + `placeOrder` via API); a UI do storefront fica só como smoke da home.
 - Aumentou timeouts/retries para lidar com lentidão e erros Cloudflare do demo público.
 
 ### Adicionado
-- `cy.healthcheck` / `cy.gql` com retry em HTTP 502/503/504 e falha rápida com mensagem clara.
+- `cy.healthcheck` / `cy.gql` com retry em HTTP 502/503/504, log de latência e fail-fast claro.
 - `cy.visitWithRetry` para navegações HTTP 502/503/504.
 - `cy.selectScandiOption` para FieldSelect (evita `pointer-events: none` no `<select>` nativo).
-- Fallback GraphQL `addConfigurableProductsToCart` quando o clique de Add to Cart não dispara mutation.
-- `cy.syncScandiCartId` / `cy.placeGuestOrderGraphql` quando o storefront não sincroniza o carrinho guest.
+- `cy.addConfigurableToCartGraphql`, `cy.assertCartGraphql`, `cy.syncScandiCartId`, `cy.placeGuestOrderGraphql`.
 - Retry dedicado de `createCustomer` em 502 (até 3 tentativas) no signup.
-- Asserts duros de carrinho (UI ou GraphQL) e `order_number` após `placeOrder`.
 - Comando `cy.acceptCookies` para o banner “Got it”.
 - Asserção do cadastro via resposta GraphQL `createCustomer`.
 

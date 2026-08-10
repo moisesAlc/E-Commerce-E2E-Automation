@@ -1,0 +1,11 @@
+URL: https://luma-demo.scandipwa.com/women.html
+HTTP: 200
+Title: 
+TS: 2026-08-09T16:58:42.454Z
+Attempt: 1
+
+BODY:
+Demo store is hosted on readymage.com. Check new arrivals here! USD EUR MEN WOMEN COLLECTIONS GEAR Home Women 75 items found (6) Erika Running Short US$ 45,00 (6) Ina Compression Short US$ 49,00 (7) Ana Running Short US$ 40,00 (6) Sybil Running Short US$ 44,00 (6) Echo Fit Compression Short US$ 24,00 (6) Bess Yoga Short US$ 28,00 (6) Gwen Drawstring Bike Short US$ 50,00 ADD TO CART (6) Maxima Drawstring Short US$ 28,00 (6) Fiona Fitness Short US$ 29,00 (6) Portia Capri US$ 49,00 (6) Deirdre Relaxed-Fit Capri US$ 63,00 (6) Sylvia Capri US$ 42,00 (6) Daria Bikram Pant US$ 51,00 (6) Carina Basic Capri US$ 51,00 (6) Bardot Capri US$ 48,00 (6) Aeon Capri US$ 48,00 (6) Diana Tights US$ 59,00 (6) Sahara Leggings US$ 75,00 (6) Cora Parachute Pant US$ 75,00 (
+
+CONSOLE(sample):
+

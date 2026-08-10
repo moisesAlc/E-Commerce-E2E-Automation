@@ -37,19 +37,33 @@ Cypress.Commands.add("gql", (query, variables = {}, options = {}) => {
 
 /**
  * Fails fast with a clear message when the public demo GraphQL is down.
+ * Runs before specs so we do not burn minutes on UI when origin is 502.
  */
 Cypress.Commands.add("healthcheck", () => {
+  const started = Date.now();
+
   cy.gql("{ storeConfig { store_name store_code } }", {}, {
     retries: 2,
     timeout: 60000,
   }).then((res) => {
+    const ms = Date.now() - started;
+    cy.log(`healthcheck GraphQL em ${ms}ms (HTTP ${res.status})`);
+
     if (RETRYABLE_STATUS.has(res.status)) {
       throw new Error(
-        `Demo GraphQL unavailable (HTTP ${res.status}). ` +
-          "O alvo público ScandiPWA está instável (Cloudflare/origin). Tente novamente mais tarde."
+        `Demo GraphQL unavailable (HTTP ${res.status} após retries, ${ms}ms). ` +
+          "O alvo público ScandiPWA está instável (Cloudflare/origin). " +
+          "Abortando spec para fail-fast — tente novamente mais tarde."
       );
     }
-    expect(res.status, "GraphQL health status").to.eq(200);
+
+    if (res.status !== 200 || res.body?.errors?.length) {
+      throw new Error(
+        `Demo GraphQL unhealthy (HTTP ${res.status}, ${ms}ms): ` +
+          `${JSON.stringify(res.body?.errors || res.body).slice(0, 300)}`
+      );
+    }
+
     expect(
       res.body?.data?.storeConfig?.store_name,
       "storeConfig.store_name"

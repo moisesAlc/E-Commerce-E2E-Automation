@@ -1,0 +1,12 @@
+URL: https://luma-demo.scandipwa.com/collections
+HTTP: 404
+Title: Page not found
+TS: 2026-08-09T16:58:36.393Z
+Attempt: 1
+
+BODY:
+Demo store is hosted on readymage.com. Check new arrivals here! USD EUR MEN WOMEN COLLECTIONS GEAR HomeNot Found 404 Page not found Sorry, we can`t find the page you are looking for! Please press a button below to go back to homepage. BACK TO HOMEPAGE About About Us Additional Info Privacy Policy Terms of use Use of Cookies Popular Categories Gear Women Men Follow Newsletter SUBSCRIBE Copyright © 2013-present Magento, Inc. All rights reserved. Powered by ScandiPWA
+
+CONSOLE(sample):
+[error] Failed to load resource: the server responded with a status of 404 ()
+[error] Failed to load resource: the server responded with a status of 404 ()

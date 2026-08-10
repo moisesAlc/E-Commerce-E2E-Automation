@@ -1,0 +1,11 @@
+URL: https://luma-demo.scandipwa.com/cart
+HTTP: 200
+Title: Cart
+TS: 2026-08-09T16:59:03.517Z
+Attempt: 1
+
+BODY:
+Demo store is hosted on readymage.com. Check new arrivals here! USD EUR 0 items MEN WOMEN COLLECTIONS GEAR HomeShopping cart Cart Free shipping on any order with code SCANDIPWA Summary Subtotal US$ 0,00 About About Us Additional Info Privacy Policy Terms of use Use of Cookies Popular Categories Gear Women Men Follow Newsletter SUBSCRIBE Copyright © 2013-present Magento, Inc. All rights reserved. Powered by ScandiPWA
+
+CONSOLE(sample):
+
