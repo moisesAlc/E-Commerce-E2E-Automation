@@ -7,17 +7,15 @@
 > *Testamos hoje • Garantimos qualidade • Entregamos confiança*  
 > Squad de QA
 
-| # | Nome | Papel / foco no projeto | Contato |
-|---|------|-------------------------|---------|
-| 1 | Moisés Alcântara | Coordenação / documentação / Cenário E2E — cadastro (`#CT-1`) / Cenário E2E — compra (`#CT-2`) | [@moisesAlc](https://github.com/moisesAlc) |
-| 2 | `[Nome]` | | GitHub: `---` |
-| 3 | `[Nome]` | | GitHub: `---` |
-| 4 | `[Nome]` | | GitHub: `---` |
-| 5 | `[Nome]` | | GitHub: `---` |
-| 6 | `[Nome]` | | GitHub: `---` |
-| 7 | `[Nome]` | | GitHub: `---` |
-
-> Esboço inicial — substitua nomes, papéis e links (GitHub/LinkedIn) pelos dados reais da turma.
+| Nome |
+|------|
+| Antonio Barbosa |
+| Caroline Cortat |
+| Gabriela Salustiano |
+| Giovanna Rodrigues |
+| Matheus Santos |
+| Moisés Madeira |
+| Paula Botelho |
 
 ### ✅ Checklist do grupo (antes de abrir branches)
 
