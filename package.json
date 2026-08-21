@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
-    "test:whatsNew": "npx cypress run --spec cypress/e2e/tests/whatsNew.cy.js",
-    "test:signUp": "npx cypress run --spec cypress/e2e/tests/signUpForm.cy.js"
+    "test": "npx cypress run"
   },
   "repository": {
     "type": "git",
