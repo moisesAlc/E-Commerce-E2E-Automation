@@ -6,9 +6,18 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.
 
 ## [Unreleased]
 
-### Adicionado
-- Documentação dos cenários de teste (fluxos E2E) em [`docs/fluxos.md`](docs/fluxos.md); README aponta para esse arquivo.
-- Seção de pré-requisitos no README (Git, Node.js, npm) com versões recomendadas.
+### Alterado
+- Escopo da `main` restrito à suíte de carrinho **CT601–CT603** (Fusion Backpack / minicart no Magebit).
+- README alinhado aos CT60X (padrão Cypress direto, `baseUrl`, adaptação Magebit vs spec em `apoio`); cadastro/compra e especificação completa ficam na branch `apoio`.
+- Specs passam a abrir a home com `cy.visit('/')`, usando o `baseUrl` de [`cypress.config.js`](cypress.config.js).
+- Clique em **Add to Cart** nos três specs espera o botão visível e habilitado (`.and('not.be.disabled')`).
+
+### Removido
+- Specs, page objects e fixtures de cadastro/compra (`signUpForm`, `whatsNew`) da `main` (preservados em `apoio`).
+- [`docs/fluxos.md`](docs/fluxos.md) da `main` (preservado em `apoio`).
+- Scripts npm `test:signUp` e `test:whatsNew`.
+- Comandos customizados `cy.login` e `cy.registerAccount`.
+- `env.URL` (página de Create Account) em `cypress.config.js`.
 
 ## [1.1.0] - 2026-08-07
 

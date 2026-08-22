@@ -19,20 +19,22 @@
 
 ### ✅ Checklist do grupo (antes de abrir branches)
 
-- [ ] Mapear a lista fechada de cenários (CT601 …) e o que cada um cobre / não cobre
-- [ ] Validar manualmente cada cenário no Magebit (caminho existe e é estável o bastante)
+- [ ] Mapear a lista fechada de cenários (CT60X …) e o que cada um cobre / não cobre no **Magebit**
+- [ ] Validar manualmente cada cenário (caminho existe e é estável o bastante)
 - [ ] Combinar donos (quem fica com qual CT — sem sobreposição)
 - [ ] Definir escopo mínimo de cada CT (asserts, critério de “pronto”)
-- [ ] Só então cada pessoa cria a branch `ct-N-nome` e segue [Contribuindo](#-contribuindo)
+- [ ] Só então cada pessoa cria a branch `ct-NNN-nome` e segue [Contribuindo](#-contribuindo)
 
 ## 📖 Visão geral
 
 Suíte de testes automatizados com **Cypress** para um site de e-commerce.  
-O alvo atual é o demo público Magento Luma em [magento2-demo.magebit.com](https://magento2-demo.magebit.com/) (substituto do `magento.softwaretestingboard.com`, descontinuado).
+O alvo da `main` é o demo Magento Luma em [magento2-demo.magebit.com](https://magento2-demo.magebit.com/) (substituto do `magento.softwaretestingboard.com`, descontinuado).
 
-Os scripts cobrem o **carrinho de compras** (adição, alteração de quantidade e remoção) — CT601 a CT603.
+Escopo atual: **carrinho** (adição, alteração de quantidade e remoção) — **CT601 a CT603**, com Cypress direto na UI (sem Page Object).
 
-> Fluxos de cadastro/compra e a especificação completa de testes ficam na branch `apoio`.
+A URL do demo fica em `baseUrl` no [`cypress.config.js`](cypress.config.js); os specs usam `cy.visit('/')`.
+
+> Cadastro, compra ponta a ponta e a especificação completa do Squad (incl. cenários não automatizados) ficam na branch **`apoio`**. Os IDs CT60X da especificação foram **adaptados** ao Magebit (produto/minicart); não são cópia 1:1 do demo ScandiPWA do documento.
 
 ## 🧰 Pré-requisitos
 
@@ -90,6 +92,8 @@ npm install
 | `ct602.cy.js` | CT602 | Alterar quantidade no minicart |
 | `ct603.cy.js` | CT603 | Remover produto do minicart |
 
+Padrão comum nos três: abrir a home via `baseUrl`, abrir a PDP da Fusion Backpack e só clicar em **Add to Cart** quando o botão estiver visível e **habilitado**.
+
 ## ▶️ Executando os testes
 
 🖥️ Abrir o Cypress Test Runner:
@@ -106,9 +110,17 @@ npm test
 npx cypress run
 ```
 
+Um spec isolado:
+
+```bash
+npx cypress run --spec cypress/e2e/tests/ct601.cy.js
+```
+
 ## 📊 Relatórios
 
 Após a execução, artefatos do Cypress (quando gerados) ficam em `cypress/screenshots` e `cypress/videos`.
+
+Histórico de mudanças: [`CHANGELOG.md`](CHANGELOG.md).
 
 > ⚠️ **Atenção:** o fluxo de contribuição (um CT por pessoa / uma branch / um PR) só funciona bem se os cenários já estiverem **mapeados e validados** no Magebit. Sem isso, há risco de branches sobrepostas, fluxos frágeis e retrabalho nos PRs. Use o checklist da seção da equipe antes de começar.
 
@@ -132,33 +144,31 @@ npm install
 ### 2. Escolher o cenário
 
 1. Veja os cenários existentes na tabela acima (CT601–CT603).
-2. Combine com o grupo qual será o **seu CT** (ex.: CT604 checkout, busca…).
-3. Anote um identificador alinhado à especificação (ex.: `CT604`).
+2. Combine com o grupo o próximo CT (ex.: CT604 checkout no Magebit).
+3. Valide o fluxo **manualmente no Magebit** antes de automatizar (a especificação em `apoio` pode descrever outro demo).
 
 ### 3. Criar a branch do seu cenário
 
-Use um nome claro, em minúsculas, com o número do CT:
-
 ```bash
 git checkout -b ct-604-checkout
-# exemplos: ct-605-cupom, ct-101-busca
+# exemplos: ct-605-cupom, ct-607-persistencia-carrinho
 ```
 
 ### 4. Implementar o cenário
 
-Na sua branch, em geral você vai:
+Na sua branch:
 
-1. Criar o spec: `cypress/e2e/tests/ctNNN.cy.js`
-2. Criar page object / fixture se precisar
-3. Rodar e validar localmente com Cypress
-
-Siga o padrão dos CT60X atuais: asserts claros sobre a UI do Magebit.
+1. Crie o spec em `cypress/e2e/tests/ctNNN.cy.js`.
+2. Siga o padrão dos CT60X: Cypress direto na UI, `cy.visit('/')` (via `baseUrl`), asserts claros.
+3. Em ações de carrinho, espere elementos interagíveis (ex.: botão **Add to Cart** não disabled).
+4. Não dependa de Page Object / fixtures a menos que o grupo combine o contrário.
 
 ### 5. Validar localmente
 
 ```bash
 npx cypress open
 # ou
+npx cypress run --spec cypress/e2e/tests/ctNNN.cy.js
 npm test
 ```
 
@@ -173,7 +183,7 @@ git push -u origin ct-604-checkout
 Abra um **Pull Request** de `ct-604-checkout` → `main` no GitHub, descrevendo:
 
 - qual CT é;
-- o que o fluxo cobre;
+- o que o fluxo cobre no Magebit;
 - como rodar o teste.
 
 ### Boas práticas
@@ -181,6 +191,7 @@ Abra um **Pull Request** de `ct-604-checkout` → `main` no GitHub, descrevendo:
 - Não altere o cenário de outro colega sem combinar.
 - Mantenha a `main` atualizada (`git pull`) antes de abrir o PR.
 - Prefira commits pequenos e mensagens claras (padrão do repositório).
+- Atualize o [`CHANGELOG.md`](CHANGELOG.md) quando a mudança for relevante.
 
 ## 👥 Autores
 

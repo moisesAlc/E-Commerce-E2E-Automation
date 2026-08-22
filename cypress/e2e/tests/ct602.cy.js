@@ -2,7 +2,8 @@ describe('CT602 - Validar a alteração da quantidade de um produto no carrinho'
 
   it('Deve alterar a quantidade da Mochila Fusion para 2', () => {
 
-    cy.visit('https://magento2-demo.magebit.com/')
+    // Abre a home via baseUrl (cypress.config.js)
+    cy.visit('/')
 
     // Acessar a Fusion Backpack
     cy.contains('Fusion Backpack')
@@ -12,6 +13,7 @@ describe('CT602 - Validar a alteração da quantidade de um produto no carrinho'
     // Adicionar produto ao carrinho
     cy.get('button[title="Add to Cart"]')
       .should('be.visible')
+      .and('not.be.disabled')
       .click()
 
     // Validar que o produto foi adicionado

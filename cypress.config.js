@@ -10,8 +10,4 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-
-  env: {
-    URL: "https://magento2-demo.magebit.com/customer/account/create/",
-  },
 });
