@@ -4,38 +4,39 @@ describe('CT602 - Validar a alteração da quantidade de um produto no carrinho'
 
     // Abre a home via baseUrl (cypress.config.js)
     cy.visit('/')
+    cy.passo('1. Home aberta (Magebit)')
 
-    // Acessar a Fusion Backpack
     cy.contains('Fusion Backpack')
       .should('be.visible')
       .click()
+    cy.passo('2. Página da Fusion Backpack')
 
-    // Adicionar produto ao carrinho
+    cy.passo('3. Adicionar ao carrinho')
     cy.get('button[title="Add to Cart"]')
       .should('be.visible')
       .and('not.be.disabled')
       .click()
 
-    // Validar que o produto foi adicionado
     cy.contains('You added Fusion Backpack to your shopping cart.')
       .should('be.visible')
+    cy.passo('4. Mensagem de sucesso confirmada')
 
-    // Abrir carrinho
     cy.get('a.action.showcart')
       .click()
+    cy.passo('5. Minicart aberto')
 
-    // Alterar quantidade de 1 para 2
+    cy.passo('6. Alterar quantidade de 1 para 2')
     cy.get('.minicart-items .item-qty')
       .clear()
       .type('2')
 
-    // Atualizar a quantidade
+    cy.passo('7. Atualizar quantidade')
     cy.get('.minicart-items .update-cart-item')
       .click()
 
-    // Validar que a quantidade foi alterada para 2
     cy.get('.minicart-items .item-qty')
       .should('have.value', '2')
+    cy.passo('8. Quantidade = 2 validada')
 
   })
 
