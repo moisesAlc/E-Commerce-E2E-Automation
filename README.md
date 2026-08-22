@@ -17,14 +17,6 @@
 | Moisés Madeira |
 | Paula Botelho |
 
-### ✅ Checklist do grupo (antes de abrir branches)
-
-- [ ] Mapear a lista fechada de cenários (CT60X …) e o que cada um cobre / não cobre no **Magebit**
-- [ ] Validar manualmente cada cenário (caminho existe e é estável o bastante)
-- [ ] Combinar donos (quem fica com qual CT — sem sobreposição)
-- [ ] Definir escopo mínimo de cada CT (asserts, critério de “pronto”)
-- [ ] Só então cada pessoa cria a branch `ct-NNN-nome` e segue [Contribuindo](#-contribuindo)
-
 ## 📖 Visão geral
 
 Suíte de testes automatizados com **Cypress** para um site de e-commerce.  
